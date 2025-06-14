@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos Básicos de Programación - REA</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .exercise {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .exercise h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #27ae60;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            margin-bottom: 1rem;
+            min-height: 100px;
+        }
+        
+        .forum-post {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .forum-post h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .forum-post .meta {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .license {
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Conceptos Básicos de Programación</h1>
+            <p>Recurso Educativo Abierto para estudiantes de noveno grado</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#contenidos">Contenidos</a></li>
+            <li><a href="#ejercicios">Ejercicios</a></li>
+            <li><a href="#foro">Foro</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="introduccion">
+            <h2>Introducción a la Programación</h2>
+            <p>Bienvenidos al Recurso Educativo Abierto (REA) sobre Conceptos Básicos de Programación. Este material está diseñado para estudiantes de noveno grado que deseen aprender los fundamentos de la programación.</p>
+            
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ysEN5RaKOlA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <p>La programación es el proceso de crear instrucciones para que las computadoras realicen tareas específicas. En esta unidad aprenderás:</p>
+            <ul>
+                <li>Qué son los algoritmos y cómo se usan para resolver problemas</li>
+                <li>Diferentes formas de expresar algoritmos (diagramas de flujo, pseudocódigo)</li>
+                <li>Qué son los lenguajes de programación y sus tipos</li>
+                <li>Conceptos básicos como variables, condicionales y bucles</li>
+            </ul>
+        </section>
+        
+        <section id="contenidos">
+            <h2>Contenidos Específicos</h2>
+            
+            <article>
+                <h3>1. Algoritmos</h3>
+                <p>Un algoritmo es un conjunto ordenado de instrucciones para resolver un problema. Es como una receta que le dice a la computadora qué pasos seguir.</p>
+                <p><strong>Ejemplo:</strong> Algoritmo para sumar dos números:</p>
+                <ol>
+                    <li>Pedir el primer número</li>
+                    <li>Pedir el segundo número</li>
+                    <li>Sumar los dos números</li>
+                    <li>Mostrar el resultado</li>
+                </ol>
+            </article>
+            
+            <article>
+                <h3>2. Formas de Expresión de Algoritmos</h3>
+                <p>Podemos representar algoritmos de diferentes maneras:</p>
+                
+                <h4>Diagramas de Flujo</h4>
+                <p>Usan símbolos gráficos para representar los pasos de un algoritmo.</p>
+                
+                <h4>Pseudocódigo</h4>
+                <p>Es una descripción informal de alto nivel de un algoritmo que usa una mezcla de lenguaje natural y estructuras de programación.</p>
+                <pre>
+INICIO
+    LEER numero1
+    LEER numero2
+    resultado = numero1 + numero2
+    ESCRIBIR resultado
+FIN
+                </pre>
+            </article>
+            
+            <article>
+                <h3>3. Lenguajes de Programación</h3>
+                <p>Un lenguaje de programación es un sistema de comunicación que permite a los humanos dar instrucciones a las computadoras.</p>
+                
+                <h4>Tipos de lenguajes:</h4>
+                <ul>
+                    <li><strong>Lenguajes de alto nivel:</strong> Más cercanos al lenguaje humano (Python, Java, JavaScript)</li>
+                    <li><strong>Lenguajes de bajo nivel:</strong> Más cercanos al lenguaje máquina (Ensamblador)</li>
+                    <li><strong>Lenguajes compilados:</strong> Se traducen completamente antes de ejecutarse (C++)</li>
+                    <li><strong>Lenguajes interpretados:</strong> Se traducen línea por línea durante la ejecución (Python, JavaScript)</li>
+                </ul>
+            </article>
+        </section>
+        
+        <section id="ejercicios">
+            <h2>Ejercicios Prácticos</h2>
+            
+            <div class="exercise">
+                <h3>Ejercicio 1: Crear un algoritmo</h3>
+                <p>Crea un algoritmo en pseudocódigo para calcular el área de un rectángulo. Recuerda que el área se calcula multiplicando la base por la altura.</p>
+                <textarea placeholder="Escribe tu solución aquí..."></textarea>
+                <button onclick="alert('¡Respuesta enviada! Revisa el foro para comparar con otras soluciones.')">Enviar solución</button>
+            </div>
+            
+            <div class="exercise">
+                <h3>Ejercicio 2: Identificar tipos de lenguajes</h3>
+                <p>Clasifica los siguientes lenguajes según su tipo (alto/bajo nivel, compilado/interpretado):</p>
+                <ul>
+                    <li>Python</li>
+                    <li>Ensamblador</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                </ul>
+                <textarea placeholder="Escribe tu clasificación aquí..."></textarea>
+                <button onclick="alert('¡Respuesta enviada! Revisa el foro para comparar con otras soluciones.')">Enviar solución</button>
+            </div>
+        </section>
+        
+        <section id="foro">
+            <h2>Foro de Discusión</h2>
+            <p>Comparte tus dudas, ideas y soluciones con otros estudiantes:</p>
+            
+            <div class="forum-post">
+                <h4>¿Cuál es la mejor forma de aprender a programar?</h4>
+                <div class="meta">Publicado por: Ana Martínez - 15/06/2023</div>
+                <p>He estado intentando aprender programación pero me cuesta entender algunos conceptos. ¿Alguien tiene recomendaciones sobre cómo empezar?</p>
+            </div>
+            
+            <div class="forum-post">
+                <h4>Duda sobre diagramas de flujo</h4>
+                <div class="meta">Publicado por: Carlos López - 10/06/2023</div>
+                <p>No entiendo bien cuándo usar el símbolo de decisión en los diagramas de flujo. ¿Alguien puede explicarlo con un ejemplo?</p>
+            </div>
+            
+            <h3>Nueva publicación</h3>
+            <input type="text" placeholder="Título de tu publicación" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px;">
+            <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
+            <button onclick="alert('¡Publicación enviada al foro!')">Publicar en el foro</button>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Recurso Educativo Abierto - Conceptos Básicos de Programación</p>
+            <p class="license">Este trabajo está bajo una licencia <a href="https://creativecommons.org/licenses/by/4.0/" style="color: white;">Creative Commons Atribución 4.0 Internacional</a>.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Aquí podrías añadir funcionalidad JavaScript para:
+        // - Validar ejercicios
+        // - Guardar respuestas
+        // - Cargar dinámicamente contenido del foro
+        // - etc.
+        
+        console.log("Página cargada correctamente");
+    </script>
+</body>
+</html>
